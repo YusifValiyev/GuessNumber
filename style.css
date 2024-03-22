@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+button,
+input {
+    font-family: "Press Start 2P"
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.game-container {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: black;
+}
+
+.game-container .game-header {
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1% 2%;
+}
+
+.btn {
+    padding: 20px 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.game-container .game-main-section {
+    color: white;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.game-container .game-main-section .main-header {
+    text-align: center;
+}
+
+.game-container .game-main-section .game-number-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.game-container .game-main-section .game-number-box .left,
+.right {
+    height: 10px;
+    width: 100%;
+    background-color: white;
+
+}
+
+.game-container .game-main-section .game-number-box .game-number {
+    padding: 40px 50px;
+    background-color: white;
+    color: black;
+    font-size: 4rem;
+}
+
+.game-container .game-playing-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.game-container .game-playing-section .guest-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-container .game-playing-section .guest-number .guest-input {
+    background: none;
+    border: 4px solid #eee;
+    font-size: 5rem;
+    padding: 2.5rem;
+    width: 20rem;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.game-container .game-playing-section .game-score {
+    color: white;
+    width: 30%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-container .game-playing-section .game-score .message {
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.game-container .game-playing-section .game-score .score-text,
+.highscore-text {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:870px) {
+    .game-container .game-playing-section .game-score {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .game-container .game-playing-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .game-container .game-playing-section .guest-number .guest-input {
+        width: 70%;
+    }
+
+    .game-container .game-playing-section .game-score {
+        width: 100%;
+        align-items: center;
+
+    }
+}
